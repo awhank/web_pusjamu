@@ -84,17 +84,17 @@ img { max-width: 100%; height: auto; }
 .header-brand:hover { text-decoration: none; }
 
 .header-logo {
-  width: 36px;
-  height: 36px;
-  background: var(--primary);
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
+  width: auto;
+  height: 40px;
+  /* background: var(--primary); */
+  /* border-radius: 8px; */
+  display: block;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* color: white; */
+  /* font-family: 'Nunito', sans-serif; */
+  /* font-weight: 800; */
+  /* font-size: 14px; */
   flex-shrink: 0;
 }
 
@@ -686,6 +686,16 @@ img { max-width: 100%; height: auto; }
 
 .mobile-nav .nav-link.active::after { display: none; }
 .mobile-nav .nav-link.active { color: var(--primary) !important; }
+
+/* SPA Loading State */
+#app-main[aria-busy="true"] {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  min-height: 300px;
+}
+
+/* Scroll to top after navigation */
+html { scroll-behavior: smooth; }
 
 /* Responsive */
 @media (max-width: 575.98px) {

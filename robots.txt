@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ppm.universitas.ac.id/sitemap.xml
