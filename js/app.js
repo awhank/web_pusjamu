@@ -84,6 +84,52 @@
     });
   }
 
+  function renderAkreditasiPage() {
+    DataLoader.load('akreditasi-institusi', 'data/akreditasi-institusi.json')
+      .then(function (data) {
+        var skeleton = document.getElementById('akreditasi-skeleton');
+        var dataEl = document.getElementById('akreditasi-data');
+        if (skeleton) skeleton.style.display = 'none';
+        if (dataEl) dataEl.style.display = 'block';
+
+        var badge = document.getElementById('akreditasi-badge');
+        if (badge) badge.textContent = data.peringkat;
+        var label = document.getElementById('akreditasi-label');
+        if (label) label.textContent = data.label;
+        var sk = document.getElementById('akreditasi-sk');
+        if (sk) sk.textContent = data.sk;
+        var nama = document.getElementById('akreditasi-nama');
+        if (nama) nama.textContent = data.nama;
+        var ringkasan = document.getElementById('akreditasi-ringkasan');
+        if (ringkasan) ringkasan.textContent = data.ringkasan;
+
+        var statTotal = document.getElementById('stat-total');
+        if (statTotal) statTotal.textContent = data.statistik.prodiTerakreditasi;
+        var statUnggul = document.getElementById('stat-unggul');
+        if (statUnggul) statUnggul.textContent = data.statistik.unggul;
+        var statBaikSekali = document.getElementById('stat-baik-sekali');
+        if (statBaikSekali) statBaikSekali.textContent = data.statistik.baikSekali;
+      });
+
+    DataLoader.load('prodi', 'data/prodi.json')
+      .then(function (data) {
+        var tbody = document.getElementById('prodi-tbody');
+        if (!tbody) return;
+        tbody.innerHTML = data.items.map(function (p) {
+          var badgeClass = p.akreditasi === 'Unggul' ? 'success'
+                         : p.akreditasi === 'Baik' ? 'warning'
+                         : 'primary';
+          return '<tr>'
+               + '<td>' + p.no + '</td>'
+               + '<td>' + p.nama + '</td>'
+               + '<td>' + p.jenjang + '</td>'
+               + '<td><span class="badge-custom ' + badgeClass + '">' + p.akreditasi + '</span></td>'
+               + '<td>' + p.masaBerlaku + '</td>'
+               + '</tr>';
+        }).join('');
+      });
+  }
+
   function loadPage(pageKey, pushState) {
     if (pageKey === currentHash) return;
     currentHash = pageKey;
@@ -120,6 +166,8 @@
       updateNavActive(pageKey);
       updateMeta(pageKey);
       reinitComponents();
+
+      if (pageKey === 'akreditasi') renderAkreditasiPage();
 
       if (pushState !== false && window.history && window.history.pushState) {
         var url = '/' + pageKey;

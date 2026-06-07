@@ -62,6 +62,26 @@ Website ini menggunakan arsitektur SPA-lite:
 - Navigasi utama ada di `index.html` (bagian `<header>`)
 - Ubah link, label, atau tambah item di sini (hanya 1 file)
 
+### Mengubah Data JSON (Akreditasi & Prodi)
+
+Data akreditasi institusi dan program studi diambil dari file JSON di folder `data/`. Staff dapat mengedit file ini tanpa menyentuh HTML/JS.
+
+**File: `data/akreditasi-institusi.json`**
+- `peringkat`: kode akreditasi (A / B / C)
+- `label`: teks panjang (contoh: "Akreditasi Unggul", "Baik")
+- `sk`: nomor SK BAN-PT
+- `periode`: rentang tahun
+- `ringkasan`: paragraf deskripsi
+- `statistik.prodiTerakreditasi`: jumlah total
+- `statistik.unggul/baikSekali/baik`: jumlah per kategori
+
+**File: `data/prodi.json`**
+- `items[]`: daftar program studi
+- Setiap item: `id`, `no`, `nama`, `jenjang`, `akreditasi`, `masaBerlaku`
+- Nilai `akreditasi` valid: `Unggul` | `Baik Sekali` | `Baik`
+
+> Setelah edit JSON, refresh halaman Akreditasi di browser (Ctrl+F5). Data akan muncul setelah skeleton loading selesai.
+
 ## Persyaratan Hosting
 
 Hosting statis apa pun (GitHub Pages, Netlify, server universitas):

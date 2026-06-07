@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "id": "d3-kesehatan-gigi",
+      "no": 1,
+      "nama": "D3 Kesehatan Gigi",
+      "jenjang": "D3",
+      "akreditasi": "Unggul",
+      "masaBerlaku": "2030"
+    },
+    {
+      "id": "d3-kebidanan",
+      "no": 2,
+      "nama": "D3  Kebidanan",
+      "jenjang": "D3",
+      "akreditasi": "Unggul",
+      "masaBerlaku": "2029"
+    },
+    {
+      "id": "d3-keperawatan",
+      "no": 3,
+      "nama": "D3 Keperawatan",
+      "jenjang": "D3",
+      "akreditasi": "Unggul",
+      "masaBerlaku": "2029"
+    },
+    {
+      "id": "d3-sanitasi",
+      "no": 4,
+      "nama": "D3 Sanitasi",
+      "jenjang": "D3",
+      "akreditasi": "Unggul",
+      "masaBerlaku": "2029"
+    },
+    {
+      "id": "d3-tlm",
+      "no": 5,
+      "nama": "D3 Teknologi Laboratorium Medis",
+      "jenjang": "D3",
+      "akreditasi": "Unggul",
+      "masaBerlaku": "2029"
+    },
+    {
+      "id": "d3-gizi",
+      "no": 6,
+      "nama": "D3 Gizi",
+      "jenjang": "D3",
+      "akreditasi": "Baik Sekali",
+      "masaBerlaku": "2029"
+    },
+    {
+      "id": "str-tlm",
+      "no": 7,
+      "nama": "Sarjana Terapan Teknologi Laboratorium Medis",
+      "jenjang": "STr",
+      "akreditasi": "Unggul",
+      "masaBerlaku": "2029"
+    },
+    {
+      "id": "str-gizi",
+      "no": 8,
+      "nama": "Sarjana Terapan Teknologi Laboratorium Medis",
+      "jenjang": "STr",
+      "akreditasi": "Baik Sekali",
+      "masaBerlaku": "2027"
+    },
+    {
+      "id": "str-kebidanan",
+      "no": 9,
+      "nama": "Sarjana Terapan Kebidanan",
+      "jenjang": "STr",
+      "akreditasi": "Baik Sekali",
+      "masaBerlaku": "2027"
+    },
+    {
+      "id": "str-sanitasi",
+      "no": 10,
+      "nama": "Sarjana Terapan Sanitasi Lingkungan",
+      "jenjang": "STr",
+      "akreditasi": "Baik Sekali",
+      "masaBerlaku": "2027"
+    },
+    {
+      "id": "str-terapi-gigi",
+      "no": 11,
+      "nama": "Sarjana Terapan Terapi Gigi",
+      "jenjang": "STr",
+      "akreditasi": "Baik Sekali",
+      "masaBerlaku": "2027"
+    },
+    {
+      "id": "str-keperawatan",
+      "no": 12,
+      "nama": "Sarjana Terapan Keperawatan",
+      "jenjang": "STr",
+      "akreditasi": "Baik Sekali",
+      "masaBerlaku": "2027"
+    }
+  ]
+}

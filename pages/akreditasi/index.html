@@ -23,19 +23,25 @@
         <div class="row align-items-center g-4">
           <div class="col-lg-4">
             <div style="background:linear-gradient(135deg,var(--primary-bg),var(--primary));border-radius:16px;padding:30px;text-align:center;color:white;">
-              <div style="font-family:'Nunito',sans-serif;font-size:36px;font-weight:800;line-height:1;">A</div>
-              <div style="font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;margin-top:8px;">Akreditasi Unggul</div>
-              <div style="font-size:11px;opacity:0.8;margin-top:4px;">SK BAN-PT No. 1234/SK/BAN-PT/Ak-PPJ/PT/XII/2025</div>
+              <div id="akreditasi-skeleton">
+                <div class="skeleton-circle-light" style="margin:0 auto;"></div>
+                <div class="skeleton-pulse-light" style="height:14px;width:180px;margin:12px auto 0;"></div>
+                <div class="skeleton-pulse-light" style="height:11px;width:240px;margin:6px auto 0;"></div>
+              </div>
+              <div id="akreditasi-data" style="display:none;">
+                <div id="akreditasi-badge" style="font-family:'Nunito',sans-serif;font-size:36px;font-weight:800;line-height:1;"></div>
+                <div id="akreditasi-label" style="font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;margin-top:8px;"></div>
+                <div id="akreditasi-sk" style="font-size:11px;opacity:0.8;margin-top:4px;"></div>
+              </div>
             </div>
           </div>
           <div class="col-lg-8">
-            <h2 class="section-title">Status Akreditasi Poltekkes Kemenkes Banjarmasin</h2>
-            <p>Poltekkes Kemenkes Banjarmasin telah meraih akreditasi Unggul dari BAN-PT untuk periode 2025-2030. Seluruh program studi juga telah terakreditasi dengan minimal peringkat Baik.</p>
+            <h2 class="section-title">Status Akreditasi <span id="akreditasi-nama">Poltekkes Kemenkes Banjarmasin</span></h2>
+            <p id="akreditasi-ringkasan">Poltekkes Kemenkes Banjarmasin telah meraih akreditasi B dari BAN-PT untuk periode 2023-2028. Seluruh program studi juga telah terakreditasi dengan minimal peringkat Baik.</p>
             <div class="d-flex flex-wrap gap-4 mt-3">
-              <div><div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;color:var(--primary);">32</div><small class="text-meta">Prodi Terakreditasi</small></div>
-              <div><div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;color:var(--primary);">18</div><small class="text-meta">Akreditasi Unggul</small></div>
-              <div><div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;color:var(--primary);">12</div><small class="text-meta">Baik Sekali</small></div>
-              <div><div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;color:var(--primary);">2</div><small class="text-meta">Baik</small></div>
+              <div><div id="stat-total" style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;color:var(--primary);">-</div><small class="text-meta">Prodi Terakreditasi</small></div>
+              <div><div id="stat-unggul" style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;color:var(--primary);">-</div><small class="text-meta">Akreditasi Unggul</small></div>
+              <div><div id="stat-baik-sekali" style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;color:var(--primary);">-</div><small class="text-meta">Baik Sekali</small></div>
             </div>
           </div>
         </div>
@@ -52,15 +58,12 @@
             <thead>
               <tr><th>No</th><th>Program Studi</th><th>Jenjang</th><th>Status</th><th>Masa Berlaku</th></tr>
             </thead>
-            <tbody>
-              <tr><td>1</td><td>Teknik Informatika</td><td>S1</td><td><span class="badge-custom success">Unggul</span></td><td>2030</td></tr>
-              <tr><td>2</td><td>Manajemen</td><td>S1</td><td><span class="badge-custom success">Unggul</span></td><td>2029</td></tr>
-              <tr><td>3</td><td>Akuntansi</td><td>S1</td><td><span class="badge-custom success">Unggul</span></td><td>2029</td></tr>
-              <tr><td>4</td><td>Hukum</td><td>S1</td><td><span class="badge-custom primary">Baik Sekali</span></td><td>2028</td></tr>
-              <tr><td>5</td><td>Teknik Sipil</td><td>S1</td><td><span class="badge-custom primary">Baik Sekali</span></td><td>2028</td></tr>
-              <tr><td>6</td><td>Teknik Mesin</td><td>S1</td><td><span class="badge-custom primary">Baik Sekali</span></td><td>2029</td></tr>
-              <tr><td>7</td><td>Pendidikan Biologi</td><td>S1</td><td><span class="badge-custom success">Unggul</span></td><td>2030</td></tr>
-              <tr><td>8</td><td>Ekonomi Pembangunan</td><td>S1</td><td><span class="badge-custom primary">Baik Sekali</span></td><td>2027</td></tr>
+            <tbody id="prodi-tbody">
+              <tr><td colspan="5"><div class="skeleton-pulse" style="height:18px;width:100%;"></div></td></tr>
+              <tr><td colspan="5"><div class="skeleton-pulse" style="height:18px;width:100%;"></div></td></tr>
+              <tr><td colspan="5"><div class="skeleton-pulse" style="height:18px;width:100%;"></div></td></tr>
+              <tr><td colspan="5"><div class="skeleton-pulse" style="height:18px;width:100%;"></div></td></tr>
+              <tr><td colspan="5"><div class="skeleton-pulse" style="height:18px;width:100%;"></div></td></tr>
             </tbody>
           </table>
         </div>
