@@ -697,6 +697,49 @@ img { max-width: 100%; height: auto; }
 /* Scroll to top after navigation */
 html { scroll-behavior: smooth; }
 
+/* Lightbox Dialog */
+.lightbox-dialog {
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: visible;
+}
+
+.lightbox-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox-dialog img {
+  max-width: 95vw;
+  max-height: 95vh;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  margin: 0 auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.4);
+}
+
 /* Skeleton Loading Animation */
 @keyframes skeleton-shimmer {
   0% { background-position: -400px 0; }
@@ -742,6 +785,14 @@ html { scroll-behavior: smooth; }
   .footer { padding: 24px 0; }
 
   .accordion-content-inner { padding-left: 20px; }
+
+  .lightbox-close {
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {

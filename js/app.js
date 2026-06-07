@@ -34,6 +34,33 @@
     if (ogDesc) ogDesc.setAttribute('content', info.desc);
   }
 
+  function initLightbox() {
+    var dialog = document.getElementById('lightbox');
+    var dialogImg = document.getElementById('lightbox-img');
+    var closeBtn = dialog ? dialog.querySelector('.lightbox-close') : null;
+    if (!dialog || !dialogImg) return;
+
+    document.querySelectorAll('.org-chart-img').forEach(function (img) {
+      img.onclick = function () {
+        dialogImg.src = this.currentSrc || this.src;
+        dialogImg.alt = this.alt;
+        if (typeof dialog.showModal === 'function') {
+          dialog.showModal();
+        } else {
+          dialog.setAttribute('open', '');
+        }
+      };
+    });
+
+    if (closeBtn) {
+      closeBtn.onclick = function () { dialog.close(); };
+    }
+
+    dialog.onclick = function (e) {
+      if (e.target === dialog) dialog.close();
+    };
+  }
+
   function reinitComponents() {
     // Mobile menu
     var menuToggle = document.getElementById('menuToggle');
@@ -60,6 +87,9 @@
     if (mobileOverlay) {
       mobileOverlay.onclick = closeMobileMenu;
     }
+
+    // Lightbox
+    initLightbox();
 
     // Accordion
     document.querySelectorAll('.accordion-btn').forEach(function (btn) {
