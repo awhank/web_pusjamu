@@ -65,6 +65,38 @@ img { max-width: 100%; height: auto; }
 
 .container { max-width: 1200px; }
 
+/* Topbar */
+.topbar {
+  background: var(--tertiary);
+  padding: 6px 0;
+}
+
+.topbar .container {
+  min-height: 28px;
+}
+
+.btn-topbar {
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.btn-topbar:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  text-decoration: none;
+}
+
 /* Header */
 .header {
   background: var(--white);
