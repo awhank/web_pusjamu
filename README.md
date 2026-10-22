@@ -25,6 +25,16 @@ root/
 │   │   ├── evaluasi.html
 │   │   ├── pengendalian.html
 │   │   └── peningkatan.html
+│   ├── spmi/
+│   │   ├── index.html      (Profil & Tata Kelola)
+│   │   ├── profil-tata-kelola.html
+│   │   ├── dokumen-spmi.html
+│   │   ├── implementasi-spmi.html
+│   │   ├── monitoring-evaluasi.html
+│   │   ├── audit-mutu-internal.html
+│   │   ├── rtm-tindak-lanjut.html
+│   │   ├── capaian-peningkatan-mutu.html
+│   │   └── layanan-sistem-informasi.html
 │   ├── dokumen/
 │   │   ├── index.html      (8 kategori dokumen)
 │   │   └── *.html          (halaman per kategori)
